@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
 import "../../global.css";
@@ -15,11 +15,8 @@ export default function Splash() {
   loading();
 
   return (
-    <View className="flex-1 justify-center items-center bg-emerald-600">
-      <Text className="text-blue-400 text-xl">
-        loading
-      </Text>
-      <StatusBar style="auto" />
+    <View className="flex-1 justify-center items-center bg-white" >
+      <Image source={ require('../../assets/splash.png') } className="w-72 h-72" />
     </View>
   );
 }
