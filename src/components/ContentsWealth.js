@@ -1,6 +1,9 @@
 import { Text, View, TouchableOpacity } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function ContentsWealth({ IconGroup, icon, title, text }) {
+    const navigation = useNavigation();
     return (
         <TouchableOpacity className="mx-[25px] mt-[25px] pb-[20px] flex flex-row justify-between items-center border-b border-black/10">
           <View className="bg-lightBlue w-[195px] h-[90px] flex gap-[6px]">

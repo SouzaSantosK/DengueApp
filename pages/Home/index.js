@@ -21,8 +21,8 @@ export default function Home() {
         Ações
       </Text>
       <View className="flex justify-between flex-row"> 
-        <ActionsButtons icon="syringe" text="Vacinas da Dengue"/>
-        <ActionsButtons icon="mosquito" text="Sobre a Dengue"/>
+        <ActionsButtons icon="syringe" text="Vacinas da Dengue" redirect="Vacinas"/>
+        <ActionsButtons icon="mosquito" text="Sobre a Dengue" redirect="Dengue"/>
       </View>
       <View className="mt-[20px]">
         <Text className="font-semibold text-[24px]" >Conteúdos</Text>
