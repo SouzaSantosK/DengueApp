@@ -2,7 +2,6 @@ import { Text, View, Image, TouchableOpacity } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useFonts, Figtree_400Regular, Figtree_500Medium, Figtree_700Bold, Figtree_600SemiBold } from '@expo-google-fonts/figtree';
 
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
@@ -47,7 +46,7 @@ const Tabs = () => {
             }} />
             <Tab.Screen name="Vacinas" component={Vacinas} options={{
                 tabBarIcon: ({ focused }) => (
-                    <ItemTab IconGroup={MaterialIcons} icon="vaccines" text="Vacinas" focused={focused} />
+                    <ItemTab IconGroup={FontAwesome6} icon="syringe" text="Vacinas" focused={focused} />
                 )
             }} />
             <Tab.Screen name="Dengue" component={Dengue} options={{

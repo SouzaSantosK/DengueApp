@@ -2,6 +2,7 @@ import React from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
+import { useFonts, Figtree_400Regular, Figtree_500Medium, Figtree_700Bold, Figtree_600SemiBold } from '@expo-google-fonts/figtree';
 
 import Splash from './pages/Splash';
 import Home from './pages/Home';
@@ -15,6 +16,16 @@ const Stack = createStackNavigator();
 import "./global.css";
 
 const Stacks = () => {
+  const [fontLoaded] = useFonts({
+    Figtree_400Regular,
+    Figtree_500Medium,
+    Figtree_700Bold,
+    Figtree_600SemiBold
+  });
+  if (!fontLoaded) {
+    return null;
+  }
+
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen
