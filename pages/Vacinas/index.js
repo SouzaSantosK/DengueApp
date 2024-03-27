@@ -18,6 +18,9 @@ export default function Vacinas() {
         <SectionVacina title="Dengvaxia:" path="../../assets/dengvaxia.png">
           Produzida pela Sanofi Medley, é recomendada para indivíduos que já tiveram dengue, entre 6 e 45 anos de idade.<br/><br/>O esquema vacinal consiste em três doses, com intervalos de seis meses entre elas.
         </SectionVacina>
+        <SectionVacina title="Butantan-DV:" path="../../assets/butantan.png">
+          Produzida pelo Instituto Butantan, a vacina contra a dengue em desenvolvimento está na sua terceira fase.<br/><br/>O esquema vacinal é composto por dose única, sendo feita para que apenas uma dose seja necessária.
+        </SectionVacina>
     </ScrollView>
   );
 }

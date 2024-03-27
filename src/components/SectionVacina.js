@@ -17,7 +17,7 @@ export default function SectionVacina({ path, title, children }) {
                 </Text>
             </View>
             <View className="pt-5 px-3">
-                <Image source={`${path}`} className="w-[290px] h-[140px]"/>
+                <Image source={`${path}`} className="w-[290px] h-[140px] border-blue border-[3px] rounded-[20px]"/>
             </View>
         </View>
     )

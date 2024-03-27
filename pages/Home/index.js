@@ -27,10 +27,10 @@ export default function Home() {
       <View className="mt-[20px]">
         <Text className="font-semibold text-[24px]" >Conteúdos</Text>
         <View className="bg-lightBlue w-auto h-[555px] rounded-[10px] mt-5">
-          <ContentsWealth IconGroup={FontAwesome} icon="heartbeat" text="Guia de Vigilância em Saúde - 6º edição" title="Vigilância em Saúde"/>
-          <ContentsWealth IconGroup={MaterialCommunityIcons} icon="baby-face-outline" text="Saúde da Criança" title="Saúde da família"/>
-          <ContentsWealth IconGroup={MaterialCommunityIcons} icon="hospital-box" text="Guia de Vigilância em Saúde - 6º edição" title="Vigilância em Saúde"/>
-          <ContentsWealth IconGroup={FontAwesome6} icon="hospital" text="Guia de Vigilância em Saúde - 6º edição" title="Vigilância em Saúde"/>
+          <ContentsWealth IconGroup={FontAwesome} icon="heartbeat" text="Guia de Vigilância em Saúde - 6º edição" title="Vigilância em Saúde" link="https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-3-6a-edicao/view"/>
+          <ContentsWealth IconGroup={MaterialCommunityIcons} icon="baby-face-outline" text="Saúde da Criança" title="Saúde da família" link="https://www.gov.br/saude/pt-br/composicao/saps/estrategia-saude-da-familia"/>
+          <ContentsWealth IconGroup={MaterialCommunityIcons} icon="hospital-box" text="Plano Nacional de Saúde 2016-2019" title="Plano de Saúde" link="https://www.gov.br/saude/pt-br/acesso-a-informacao/acoes-e-programas/proadi-sus/sobre-o-programa/arquivos/plano-nacional-saude-2016-2019.pdf/view"/>
+          <ContentsWealth IconGroup={FontAwesome6} icon="hospital" text="Financiamento da Saúde – CONASEMS" title="Financiamento da saúde" link="https://www.gov.br/saude/pt-br/acesso-a-informacao/gestao-do-sus/articulacao-interfederativa/cit/pautas-de-reunioes-e-resumos/2016/abril/2-d-mauro_conasems_cti.pdf/view"/>
         </View>
       </View>
     </ScrollView>

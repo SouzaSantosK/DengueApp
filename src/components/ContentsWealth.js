@@ -1,11 +1,11 @@
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity, Linking } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
 
-export default function ContentsWealth({ IconGroup, icon, title, text }) {
+export default function ContentsWealth({ IconGroup, icon, title, text, link }) {
     const navigation = useNavigation();
     return (
-        <TouchableOpacity className="mx-[25px] mt-[25px] pb-[20px] flex flex-row justify-between items-center border-b border-black/10">
+        <TouchableOpacity className="mx-[25px] mt-[25px] pb-[20px] flex flex-row justify-between items-center border-b border-black/10"  onPress={() => Linking.openURL(link)}>
           <View className="bg-lightBlue w-[195px] h-[90px] flex gap-[6px]">
             <Text className="font-semibold text-[14px] text-blue">{title}</Text>
             <Text className="font-normal text-[16px]">{text}</Text>
