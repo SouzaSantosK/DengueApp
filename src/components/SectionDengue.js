@@ -1,22 +1,26 @@
 import { Text, View, Image } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
+import Colors from "../colors";
 
 export default function SectionDengue({ path, title, children }) {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
 
-    return (
-        <View className="w-[350px] mx-auto mt-[50px]">
-            <View className="mb-6 flex flex-row gap-3">
-                <Text className="text-blue font-semibold text-[26px]">{title}</Text>
-            </View>
-            <View>
-                <Text className="text-[16px]">
-                    {children}
-                </Text>
-            </View>
-            <View className="mt-[15px] flex items-center">
-                <Image source={`${path}`} className="w-[350px] h-[150px] rounded-lg"/>
-            </View>
-        </View>
-    )
+  return (
+    <View style={{ width: 350, marginHorizontal: "auto", marginTop: 50 }}>
+      <View style={{ marginBottom: 24, flexDirection: "row", gap: 12 }}>
+        <Text style={{ color: Colors.BLUE, fontWeight: 600, fontSize: 26 }}>
+          {title}
+        </Text>
+      </View>
+      <View>
+        <Text style={{ fontSize: 16 }}>{children}</Text>
+      </View>
+      <View style={{ marginTop: 15, alignItems: "center" }}>
+        <Image
+          source={`${path}`}
+          style={{ width: 350, height: 150, borderRadius: 10 }}
+        />
+      </View>
+    </View>
+  );
 }

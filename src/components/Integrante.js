@@ -1,22 +1,52 @@
-import { Text, View, Image, TouchableOpacity, Linking } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import { Text, View, Image, Pressable, Linking } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import Colors from "../colors";
 
 export default function Integrante({ user, name, img, link }) {
-    const navigation = useNavigation();
-    return (
-        <View className="relative w-[350px] h-[180px]">
-            <Image source={`${img}`} className="w-[350px] h-[180px]" />
-            <View className="absolute w-[100%] h-[100%] bg-blue/60 rounded-lg flex justify-center pl-5">
-                <Text className="text-white text-2xl font-semibold">
-                    {user}
-                </Text>
-                <Text className="text-white text-2xl font-bold">
-                    {name}
-                </Text>
-                <TouchableOpacity className="bg-blue rounded w-[100px] mt-5" onPress={() => Linking.openURL(link)}>
-                    <Text className="px-4 py-2 text-white font-extralight w-[100%] text-center">Github</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
-    )
+  const navigation = useNavigation();
+  return (
+    <View style={{ position: "relative", width: 350, height: 180 }}>
+      <Image source={`${img}`} style={{ width: 350, height: 180 }} />
+      <View
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          backgroundColor: Colors.ALMOST_BLUE,
+          borderRadius: 10,
+          justifyContent: "center",
+          paddingLeft: 20,
+        }}
+      >
+        <Text style={{ color: Colors.WHITE, fontSize: 24, fontWeight: 600 }}>
+          {user}
+        </Text>
+        <Text style={{ color: Colors.WHITE, fontSize: 24, fontWeight: "bold" }}>
+          {name}
+        </Text>
+        <Pressable
+          style={{
+            backgroundColor: Colors.BLUE,
+            borderRadius: 5,
+            width: 100,
+            marginTop: 20,
+          }}
+          onPress={() => Linking.openURL(link)}
+        >
+          <Text
+            style={{
+              paddingVertical: 5,
+              color: Colors.WHITE,
+              fontWeight: 200,
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            Github
+          </Text>
+        </Pressable>
+      </View>
+    </View>
+  );
 }
